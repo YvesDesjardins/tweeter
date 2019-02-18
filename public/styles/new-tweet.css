@@ -1,8 +1,15 @@
 .container .new-tweet {
-  border: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+  border-radius: 10px;
 }
 
 .container .new-tweet h2 {
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
@@ -12,21 +19,20 @@
 }
 
 .container .new-tweet textarea {
-  /* margin-bottom: 0px; */
   width: 100%;
 }
 
-.container .new-tweet input {
-  /* margin-bottom: 0px; */
-  float: left;
+.container .new-tweet form {
+  margin-bottom: 10px;
 }
 
 .container .new-tweet .counter {
-  /* margin-bottom: 0px; */
   float: right;
 }
 
 .container .tweets {
+  padding-left: 2em;
+  padding-right: 2em;
   padding-top: 10px;
   clear: both;
 }
