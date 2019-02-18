@@ -1,3 +1,32 @@
 .container .new-tweet {
-  align-content: center;
+  border: 1px;
+}
+
+.container .new-tweet h2 {
+  margin-bottom: 0px;
+}
+
+.container .new-tweet hr {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.container .new-tweet textarea {
+  /* margin-bottom: 0px; */
+  width: 100%;
+}
+
+.container .new-tweet input {
+  /* margin-bottom: 0px; */
+  float: left;
+}
+
+.container .new-tweet .counter {
+  /* margin-bottom: 0px; */
+  float: right;
+}
+
+.container .tweets {
+  padding-top: 10px;
+  clear: both;
 }
