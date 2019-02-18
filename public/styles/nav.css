@@ -13,19 +13,13 @@
   z-index: 1030;
 }
 
-.logo {
-  height: 90px;
+#nav-bar .logo {
+  height: 80px;
   float: left;
 }
 
-.header {
-  font-size: 32px;
-}
-
-.container {
-  padding-top: 80px;
+#nav-bar .header {
   padding-left: 10px;
-  padding-right: 10px;
-  margin: auto;
-  font-size: 20px;
+  font-size: 36px;
+  line-height: 100px;
 }
