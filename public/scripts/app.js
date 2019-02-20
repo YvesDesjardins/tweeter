@@ -1,11 +1,18 @@
 /* eslint-disable */
 $(() => {
+  // grabs all stored tweets and renders them
+  function loadTweets() {
+    $.get("/tweets", (tweets) => {
+      renderTweets(tweets);
+    });
+  }
+
   function renderTweets(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     tweets.forEach(element => {
-      $('#tweet-list').prepend(createTweetElement(element));
+      $('#tweet-list').append(createTweetElement(element));
     });
   }
 
@@ -46,6 +53,7 @@ $(() => {
     return $tempTweet;
   };
 
+  // handles new tweet submissions
   $('.new-tweet').on('submit', (event) => {
     const $tweet = $('.tweet-text').serialize()
     event.preventDefault();
@@ -59,12 +67,6 @@ $(() => {
           console.log('bleh');
         });
   });
-
-  function loadTweets() {
-    $.get("/tweets", (tweets) => {
-      renderTweets(tweets);
-    });
-  }
 
   loadTweets();
 });
