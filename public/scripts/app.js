@@ -43,10 +43,10 @@ $(() => {
       src: img,
       alt: 'Profile image',
     }).appendTo($tempTweet.children('header'));
-    $('<name>').appendTo($tempTweet.children('header'))
+    $('<div>').appendTo($tempTweet.children('header'))
       .addClass('name')
       .text(name);
-    $('<user>').appendTo($tempTweet.children('header'))
+    $('<div>').appendTo($tempTweet.children('header'))
       .addClass('user')
       .text(handle);
 
@@ -54,12 +54,12 @@ $(() => {
       .text(content);
 
     $('<footer>').appendTo($tempTweet);
-    $('<age>').appendTo($tempTweet.children('footer'))
+    $('<div>').appendTo($tempTweet.children('footer'))
       .addClass('age')
       .text(date);
     $('<input>', {
       type: 'image',
-      src: '/images/flag.png',
+      src: '/images/refresh.png',
       class: 'buttons',
     }).appendTo($tempTweet.children('footer'));
     $('<input>', {
@@ -69,7 +69,7 @@ $(() => {
     }).appendTo($tempTweet.children('footer'));
     $('<input>', {
       type: 'image',
-      src: '/images/refresh.png',
+      src: '/images/flag.png',
       class: 'buttons',
     }).appendTo($tempTweet.children('footer'));
 

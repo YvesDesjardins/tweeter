@@ -29,6 +29,7 @@
   line-height: 30px;
   font-size: 22px;
   font-weight: bold;
+  float: left;
 }
 
 .tweet .user {
