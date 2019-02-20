@@ -57,15 +57,22 @@ $(() => {
   $('.new-tweet').on('submit', (event) => {
     const $tweet = $('.tweet-text').serialize()
     event.preventDefault();
-    $.post("/tweets", $tweet)
-      .then(() => {
-          // stuff
-          console.log($tweet);
-        },
-        (err) => {
-          // error handling
-          console.log('bleh');
-        });
+    if ($tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
+      $.post("/tweets", $tweet)
+        .then(() => {
+            // stuff
+            console.log($tweet);
+            $('.tweet-text').val('');
+            const $count = $('.tweet-text').siblings('.counter');
+            $count.text(140 - $('.tweet-text').val().length);
+          },
+          (err) => {
+            // error handling
+            console.log('bleh');
+          });
+    } else {
+      alert('Please review your message length!');
+    }
   });
 
   loadTweets();
