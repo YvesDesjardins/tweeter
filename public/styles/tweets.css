@@ -3,6 +3,7 @@
   border: 2px solid #dddddd;
   background-color: #eeeeee;
   border-radius: 5px;
+  border-bottom-left-radius: 2px;
   opacity: 0.6;
 }
 
@@ -29,7 +30,7 @@
 .tweet user {
   padding-right: 10px;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 30px;
   float: right;
 }
 
@@ -39,11 +40,21 @@
 }
 
 .tweet footer {
+  height: 25px;
   padding-left: 10px;
   padding-right: 10px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 12px;
   background-color: white;
   border-top: 1px solid #dddddd;
+  overflow: hidden;
+}
+
+.tweet age {
+  line-height: 25px;
+  font-size: 12px;
+  float: left;
+}
+
+.tweet buttons {
+  float: right;
+  opacity: 0;
 }

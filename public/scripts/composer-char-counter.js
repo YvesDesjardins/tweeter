@@ -18,11 +18,17 @@ $(document).ready(function () {
     $(this).animate({
       opacity: 1
     });
+    $(this).children('footer').children('buttons').css({
+      opacity: 1
+    });
   });
   $('#tweet-list').on('mouseleave', '.tweet', function () {
     // out
     $(this).animate({
       opacity: 0.6
+    });
+    $(this).children('footer').children('buttons').css({
+      opacity: 0
     });
   });
 });
