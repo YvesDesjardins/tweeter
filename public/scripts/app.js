@@ -1,6 +1,8 @@
 /* eslint-disable */
 $(() => {
+  // start new-tweet element as hidden
   $('.new-tweet').hide();
+
   // grabs all stored tweets and renders them
   function loadTweets() {
     $.get("/tweets", (tweets) => {
@@ -16,13 +18,12 @@ $(() => {
   }
 
   function renderTweets(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    const tweetsList = $('#tweet-list');
-    tweetsList.empty();
+    // loops through tweets, builds them using createTweetElement
+    // then append to tweet-list
+    const $tweetsList = $('#tweet-list');
+    $tweetsList.empty();
     tweets.forEach(element => {
-      tweetsList.append(createTweetElement(element));
+      $tweetsList.append(createTweetElement(element));
     });
   }
 
@@ -43,8 +44,10 @@ $(() => {
       alt: 'Profile image',
     }).appendTo($tempTweet.children('header'));
     $('<name>').appendTo($tempTweet.children('header'))
+      .addClass('name')
       .text(name);
     $('<user>').appendTo($tempTweet.children('header'))
+      .addClass('user')
       .text(handle);
 
     $('<form>').appendTo($tempTweet)
@@ -52,13 +55,23 @@ $(() => {
 
     $('<footer>').appendTo($tempTweet);
     $('<age>').appendTo($tempTweet.children('footer'))
+      .addClass('age')
       .text(date);
-    $('<buttons>').appendTo($tempTweet.children('footer'))
-      .text('🍕');
-    $('<buttons>').appendTo($tempTweet.children('footer'))
-      .text('☃️');
-    $('<buttons>').appendTo($tempTweet.children('footer'))
-      .text('🗑');
+    $('<input>', {
+      type: 'image',
+      src: '/images/flag.png',
+      class: 'buttons',
+    }).appendTo($tempTweet.children('footer'));
+    $('<input>', {
+      type: 'image',
+      src: '/images/heart.png',
+      class: 'buttons',
+    }).appendTo($tempTweet.children('footer'));
+    $('<input>', {
+      type: 'image',
+      src: '/images/refresh.png',
+      class: 'buttons',
+    }).appendTo($tempTweet.children('footer'));
 
     return $tempTweet;
   };

@@ -25,13 +25,13 @@
   border-radius: 25%;
 }
 
-.tweet name {
+.tweet .name {
   line-height: 30px;
   font-size: 22px;
   font-weight: bold;
 }
 
-.tweet user {
+.tweet .user {
   padding-right: 10px;
   font-size: 16px;
   line-height: 30px;
@@ -41,6 +41,7 @@
 .tweet form {
   padding: 15px;
   background-color: white;
+  overflow-wrap: break-word;
 }
 
 .tweet footer {
@@ -52,17 +53,19 @@
   overflow: hidden;
 }
 
-.tweet age {
+.tweet .age {
   line-height: 25px;
   font-size: 12px;
   float: left;
 }
 
-.tweet buttons {
+.tweet .buttons {
+  max-height: 20px;
+  margin-top: 2px;
   float: right;
   opacity: 0;
 }
 
-.tweet:hover buttons {
+.tweet:hover .buttons {
   opacity: 1;
 }
