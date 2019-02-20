@@ -3,7 +3,14 @@ $(() => {
   // grabs all stored tweets and renders them
   function loadTweets() {
     $.get("/tweets", (tweets) => {
-      renderTweets(tweets);
+      renderTweets(tweets.reverse());
+    });
+  }
+
+  // on new tweet, fetching from server as user and image generated there
+  function renderNewTweet() {
+    $.get("/tweets", (tweets) => {
+      renderTweets(tweets.reverse());
     });
   }
 
@@ -11,8 +18,10 @@ $(() => {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
+    const tweetsList = $('#tweet-list');
+    tweetsList.empty();
     tweets.forEach(element => {
-      $('#tweet-list').append(createTweetElement(element));
+      tweetsList.append(createTweetElement(element));
     });
   }
 
@@ -57,19 +66,22 @@ $(() => {
   $('.new-tweet').on('submit', (event) => {
     const $tweet = $('.tweet-text').serialize()
     event.preventDefault();
+
+    // tests string length
     if ($tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
       $.post("/tweets", $tweet)
-        .then(() => {
-            // stuff
-            console.log($tweet);
-            $('.tweet-text').val('');
-            const $count = $('.tweet-text').siblings('.counter');
-            $count.text(140 - $('.tweet-text').val().length);
-          },
-          (err) => {
-            // error handling
-            console.log('bleh');
-          });
+        .then((tweet) => {
+          // sucessful post
+          $('.tweet-text').val('');
+          const $count = $('.tweet-text').siblings('.counter');
+          $count.text(140 - $('.tweet-text').val().length);
+
+          renderNewTweet();
+        })
+        .fail((err) => {
+          // error handling
+          console.log(`Error: ${err}`);
+        });
     } else {
       alert('Please review your message length!');
     }
