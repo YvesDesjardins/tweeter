@@ -93,6 +93,20 @@ $(() => {
     return $tempTweet;
   };
 
+  $('.new-tweet').on('submit', (event) => {
+    const $tweet = $('.tweet-text').serialize()
+    event.preventDefault();
+    $.post("/tweets", $tweet)
+      .then(() => {
+          // stuff
+          console.log($tweet);
+        },
+        (err) => {
+          // error handling
+          console.log('bleh');
+        });
+  });
+
   // call building of list
   renderTweets(tweetData);
 });
