@@ -2,9 +2,10 @@
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 1em;
-  border: 1px solid #dddddd;
+  border: 2px solid #dddddd;
   background-color: #eeeeee;
-  border-radius: 10px;
+  border-radius: 5px;
+  opacity: 0.6;
 }
 
 .tweet header {
