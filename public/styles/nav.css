@@ -21,5 +21,23 @@
 #nav-bar .header {
   padding-left: 10px;
   font-size: 36px;
-  line-height: 100px;
+  line-height: 80px;
+}
+
+#nav-bar .compose {
+  float: right;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  /* Safari */
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  border: 2px solid white;
+  background-color: #00c5a8;
+  color: white;
+}
+
+#nav-bar .compose:hover {
+  background-color: white;
+  color: black;
 }

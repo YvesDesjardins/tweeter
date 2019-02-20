@@ -1,5 +1,6 @@
 /* eslint-disable */
 $(() => {
+  $('.new-tweet').hide();
   // grabs all stored tweets and renders them
   function loadTweets() {
     $.get("/tweets", (tweets) => {
@@ -61,6 +62,12 @@ $(() => {
 
     return $tempTweet;
   };
+
+  // handles compose button clicks
+  $('.compose').on('click', (event) => {
+    $('.new-tweet').slideToggle('fast');
+    $('.tweet-text').focus();
+  })
 
   // handles new tweet submissions
   $('.new-tweet').on('submit', (event) => {
