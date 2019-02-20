@@ -71,8 +71,6 @@ $(document).ready(function () {
     let handle = data.user.handle;
     let content = data.content.text;
 
-    console.log(date);
-
     // build out the new tweet
     $('<header>').appendTo($tempTweet);
     $('<img>', {
@@ -93,5 +91,7 @@ $(document).ready(function () {
 
     return $tempTweet;
   };
+
+  // call building of list
   renderTweets(tweetData);
 });
