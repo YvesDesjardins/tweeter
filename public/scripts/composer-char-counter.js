@@ -11,24 +11,4 @@ $(document).ready(function () {
       $count.css('color', 'red');
     }
   });
-
-  // mouseover + mouseleave handling of visibility
-  $('#tweet-list').on('mouseover', '.tweet', function () {
-    // over
-    $(this).animate({
-      opacity: 1
-    });
-    $(this).children('footer').children('buttons').css({
-      opacity: 1
-    });
-  });
-  $('#tweet-list').on('mouseleave', '.tweet', function () {
-    // out
-    $(this).animate({
-      opacity: 0.6
-    });
-    $(this).children('footer').children('buttons').css({
-      opacity: 0
-    });
-  });
 });

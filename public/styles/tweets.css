@@ -7,6 +7,10 @@
   opacity: 0.6;
 }
 
+.tweet:hover {
+  opacity: 1;
+}
+
 .tweet header {
   height: 50px;
 }
@@ -57,4 +61,8 @@
 .tweet buttons {
   float: right;
   opacity: 0;
+}
+
+.tweet:hover buttons {
+  opacity: 1;
 }
