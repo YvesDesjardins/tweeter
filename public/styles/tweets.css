@@ -1,6 +1,4 @@
 .tweet {
-  margin-left: 2em;
-  margin-right: 2em;
   margin-top: 1em;
   border: 2px solid #dddddd;
   background-color: #eeeeee;
@@ -9,24 +7,43 @@
 }
 
 .tweet header {
+  height: 50px;
+}
+
+.tweet img {
   padding-left: 10px;
   padding-right: 10px;
-  height: 35px;
-  line-height: 35px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  max-height: 42px;
+  float: left;
+  border-radius: 25%;
+}
+
+.tweet name {
+  line-height: 30px;
   font-size: 22px;
   font-weight: bold;
 }
 
-.tweet form {
-  background-color: white;
-  padding-left: 10px;
+.tweet user {
   padding-right: 10px;
+  font-size: 16px;
+  line-height: 25px;
+  float: right;
+}
+
+.tweet form {
+  padding: 15px;
+  background-color: white;
 }
 
 .tweet footer {
-  background-color: white;
-  border-top: 1px solid #dddddd;
-  font-size: 12px;
   padding-left: 10px;
   padding-right: 10px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  background-color: white;
+  border-top: 1px solid #dddddd;
 }

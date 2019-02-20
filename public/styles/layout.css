@@ -30,6 +30,9 @@ body {
 
 .container {
   padding-top: 80px;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
   width: 450px;
   margin: auto;
   font-size: 20px;
