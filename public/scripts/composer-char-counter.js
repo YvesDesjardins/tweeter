@@ -10,4 +10,19 @@ $(document).ready(function () {
       $count.css('color', 'red');
     }
   });
+
+  // mouseover + mouseleave handling of visibility
+  $('#tweet-list').on('mouseover', 'article', function () {
+    // over
+    $(this).animate({
+      opacity: 1
+    });
+    console.log('here');
+  });
+  $('#tweet-list').on('mouseleave', 'article', function () {
+    // out
+    $(this).animate({
+      opacity: 0.6
+    });
+  });
 });

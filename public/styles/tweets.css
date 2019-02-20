@@ -1,0 +1,25 @@
+.tweet {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.tweet header {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tweet form {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tweet footer {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
