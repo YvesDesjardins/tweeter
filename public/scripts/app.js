@@ -79,8 +79,6 @@ $(() => {
 
   // catches user pressing 'enter' key and submits form
   $('.tweet-text').keypress(function (e) {
-    e.preventDefault();
-
     if (e.which === 13) {
       $('.new-tweet').submit();
     }
@@ -92,7 +90,7 @@ $(() => {
     event.preventDefault();
 
     // tests string length
-    if ($tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
+    if (!$('.new-tweet').is(":hidden") && $tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
       $.post("/tweets", $tweet)
         .then((tweet) => {
           // sucessful post
@@ -100,6 +98,7 @@ $(() => {
           const $count = $('.tweet-text').siblings('.counter');
           $count.text(140 - $('.tweet-text').val().length);
 
+          $(".compose").trigger("click");
           // reload tweets
           loadTweets();
         })
