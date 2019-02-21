@@ -6,7 +6,7 @@ $(() => {
     const $count = $('.tweet-text').siblings('.counter');
     $count.text(140 - $('.tweet-text').val().length);
 
-    // if char count > 0 color text red
+    // if char count < 0 color text red
     if ($count.text() < 0) {
       $count.addClass('error');
     } else {
