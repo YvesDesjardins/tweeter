@@ -1,40 +1,46 @@
-.container .new-tweet {
+.new-tweet {
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 1em;
   border: 1px solid #dddddd;
   background-color: #eeeeee;
   border-radius: 10px;
+  position: fixed;
+  z-index: 1030;
+  width: 370px;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-.container .new-tweet h2 {
+.new-tweet h2 {
   margin-top: 5px;
   margin-bottom: 0px;
 }
 
-.container .new-tweet hr {
+.new-tweet hr {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.container .new-tweet textarea {
+.new-tweet textarea {
   width: 100%;
 }
 
-.container .new-tweet form {
+.new-tweet form {
   margin-bottom: 10px;
 }
 
-.container .new-tweet .counter {
+.new-tweet .counter {
   float: right;
 }
 
-.container .tweets {
+.tweets {
   padding-left: 2em;
   padding-right: 2em;
   clear: both;
 }
 
-.container .error {
+.error {
   color: red;
 }

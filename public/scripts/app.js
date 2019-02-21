@@ -73,6 +73,7 @@ $(() => {
   // handles compose button clicks
   $('.compose').on('click', (event) => {
     $('.new-tweet').slideToggle('fast');
+    $('.container').toggleClass('active');
     $('.tweet-text').focus();
   })
 

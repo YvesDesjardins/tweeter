@@ -38,3 +38,7 @@ body {
   font-size: 20px;
   background-color: white;
 }
+
+.container.active {
+  padding-top: 220px;
+}
