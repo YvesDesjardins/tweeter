@@ -77,6 +77,15 @@ $(() => {
     $('.tweet-text').focus();
   })
 
+  // catches user pressing 'enter' key and submits form
+  $('.tweet-text').keypress(function (e) {
+    e.preventDefault();
+
+    if (e.which === 13) {
+      $('.new-tweet').submit();
+    }
+  });
+
   // handles new tweet submissions
   $('.new-tweet').on('submit', (event) => {
     const $tweet = $('.tweet-text').serialize()
