@@ -34,3 +34,7 @@
   padding-right: 2em;
   clear: both;
 }
+
+.container .error {
+  color: red;
+}

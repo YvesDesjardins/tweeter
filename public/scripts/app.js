@@ -2,6 +2,7 @@
 $(() => {
   // start new-tweet element as hidden
   $('.new-tweet').hide();
+  $('.error').hide();
 
   // grabs all stored tweets and renders them
   function loadTweets() {
@@ -102,8 +103,20 @@ $(() => {
           // error handling
           console.log(`Error: ${err}`);
         });
+    } else if ($tweet.slice(5).length > 140) {
+      // error message
+      console.log('error 140');
+      let error = $('.error');
+      error.text('Please shorten your message.');
+      error.fadeIn(400);
+      error.delay(1000).fadeOut(400);
     } else {
-      alert('Please review your message length!');
+      // error message
+      console.log('error 0');
+      let error = $('.error');
+      error.text('Please fill out this field.');
+      error.fadeIn(400);
+      error.delay(1000).fadeOut(400);
     }
   });
 
