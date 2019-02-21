@@ -11,13 +11,6 @@ $(() => {
     });
   }
 
-  // on new tweet, fetching from server as user and image generated there
-  function renderNewTweet() {
-    $.get("/tweets", (tweets) => {
-      renderTweets(tweets.reverse());
-    });
-  }
-
   function renderTweets(tweets) {
     // loops through tweets, builds them using createTweetElement
     // then append to tweet-list
@@ -97,7 +90,8 @@ $(() => {
           const $count = $('.tweet-text').siblings('.counter');
           $count.text(140 - $('.tweet-text').val().length);
 
-          renderNewTweet();
+          // reload tweets
+          loadTweets();
         })
         .fail((err) => {
           // error handling
