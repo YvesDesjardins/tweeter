@@ -82,6 +82,7 @@ $(() => {
   // catches user pressing 'enter' key and submits form
   $('.tweet-text').keypress(function (e) {
     if (e.which === 13) {
+      e.preventDefault();
       $('.new-tweet').submit();
     }
   });
