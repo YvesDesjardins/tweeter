@@ -18,7 +18,17 @@ $color1: #71c9ce;
 $color2: #a6e3e9;
 $color3: #cbf1f5;
 $color4: #e3fdfd;
-$colorText: black;
+
+$colorTweetBackground: #fafafa;
+$colorText: #244751;
+$colorBorder: #dddddd;
+
+$colorComposeButton: #00c5a8;
+$colorComposeButtonBorder: white;
+$colorComposeButtonText: white;
+$colorComposeButtonHover: white;
+$colorComposeButtonHoverText: black;
+
 
 /*
  * Global layout stuff
@@ -26,7 +36,7 @@ $colorText: black;
 
 body {
   margin: 0;
-  color: #244751;
+  color: $colorText;
   background-color: $color3;
   font-family: 'Roboto Condensed', sans-serif;
 }

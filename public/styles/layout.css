@@ -47,7 +47,7 @@ body {
 
 #nav-bar {
   background-color: #71c9ce;
-  color: black;
+  color: #244751;
   height: 80px;
   width: 100%;
   margin: auto;
@@ -93,8 +93,8 @@ body {
 .new-tweet {
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid #000000;
-  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  background-color: #e3fdfd;
   border-radius: 10px;
   position: fixed;
   z-index: 1030;
@@ -125,8 +125,8 @@ body {
 }
 
 .new-tweet .submit-button {
-  background-color: #00a087;
-  border: 2px solid #005e50;
+  background-color: #00c5a8;
+  border: 2px solid white;
   color: white;
   font-weight: bold;
   border-radius: 10px;
@@ -198,7 +198,7 @@ body {
 
 .tweet form {
   padding: 15px;
-  background-color: #e3fdfd;
+  background-color: #fafafa;
   overflow-wrap: break-word;
 }
 
@@ -206,7 +206,7 @@ body {
   height: 25px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #e3fdfd;
+  background-color: #fafafa;
   border-top: 1px solid #dddddd;
   overflow: hidden;
 }

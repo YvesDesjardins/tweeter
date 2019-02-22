@@ -1,8 +1,8 @@
 .new-tweet {
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid #000000;
-  background-color: #eeeeee;
+  border: 1px solid $colorBorder;
+  background-color: $color4;
   border-radius: 10px;
   position: fixed;
   z-index: 1030;
@@ -32,9 +32,9 @@
   }
 
   .submit-button {
-    background-color: #00a087;
-    border: 2px solid #005e50;
-    color: white;
+    background-color: $colorComposeButton;
+    border: 2px solid $colorComposeButtonBorder;
+    color: $colorComposeButtonText;
     font-weight: bold;
     border-radius: 10px;
     font-size: 18px;
@@ -44,8 +44,8 @@
   }
 
   .submit-button:hover {
-    background-color: white;
-    color: black;
+    background-color: $colorComposeButtonHover;
+    color: $colorComposeButtonHoverText;
   }
 
   .counter {
