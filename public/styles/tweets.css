@@ -69,6 +69,7 @@
   margin-top: 2px;
   float: right;
   opacity: 0;
+  outline: none;
 }
 
 .tweet:hover .buttons {
