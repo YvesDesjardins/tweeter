@@ -1,8 +1,8 @@
 /* eslint-disable */
 $(() => {
   // process on keyup within text input
-  $('.tweet-text').keyup((e) => {
-    e.preventDefault();
+  $('.tweet-text').on('keydown keyup', ((e) => {
+    // e.preventDefault();
     const $count = $('.tweet-text').siblings('.counter');
     $count.text(140 - $('.tweet-text').val().length);
 
@@ -12,5 +12,5 @@ $(() => {
     } else {
       $count.removeClass('error-count');
     }
-  });
+  }));
 });
