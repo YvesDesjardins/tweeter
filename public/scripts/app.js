@@ -31,7 +31,6 @@ $(() => {
     const date = dateParse > 0 ? `${dateParse} days old` : `Today at ${timeParse}`;
     const handle = [data.user.handle];
     const content = data.content.text;
-    console.log(timeParse);
 
     // build out the new tweet
     $('<header>').appendTo($tempTweet);
