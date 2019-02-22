@@ -24,12 +24,14 @@ $(() => {
   function createTweetElement(data) {
     // takes some tweet object and parse
     const $tempTweet = $('<article>').addClass('tweet');
-    const name = [data.user.name];
+    const {
+      name,
+      handle
+    } = data.user;
     const img = data.user.avatars.small;
     const timeParse = new Date(data.created_at).toString().slice(16, 33);
     const dateParse = Math.round(Math.abs((data.created_at - Date.now()) / (24 * 60 * 60 * 1000)));
     const date = dateParse > 0 ? `${dateParse} days old` : `Today at ${timeParse}`;
-    const handle = [data.user.handle];
     const content = data.content.text;
 
     // build out the new tweet
@@ -129,4 +131,24 @@ $(() => {
 
   // loads all tweets on refresh of page
   loadTweets();
+
+  // if no existing tweets post this tempory one
+  if ($('#tweet-list').children().length === 0) {
+    console.log('woops');
+    const $tempTweet = {
+      user: {
+        name: 'Inner thoughts',
+        avatars: {
+          small: 'https://vanillicon.com/371d24858ca58a84f17f9dd707c77fd1_50.png'
+        },
+        created_at: Date.now(),
+        handle: '@yourThoughts'
+      },
+      content: {
+        text: 'Kinda lonely in here right? Maybe you should post something!'
+      }
+    }
+
+    renderTweets([$tempTweet]);
+  }
 });
