@@ -6,7 +6,7 @@ $(() => {
 
   // grabs all stored tweets and renders them
   function loadTweets() {
-    $.get("/tweets", (tweets) => {
+    $.get('/tweets', (tweets) => {
       renderTweets(tweets.reverse());
     });
   }
@@ -98,15 +98,15 @@ $(() => {
     event.preventDefault();
 
     // tests string length in submission field
-    if (!$('.new-tweet').is(":hidden") && $tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
-      $.post("/tweets", $tweet)
+    if (!$('.new-tweet').is(':hidden') && $tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
+      $.post('/tweets', $tweet)
         // sucessfully posted to /tweets
         .then(() => {
           $('.tweet-text').val('');
           const $count = $('.tweet-text').siblings('.counter');
           $count.text(140 - $('.tweet-text').val().length);
 
-          $(".compose").trigger("click");
+          $('.compose').trigger('click');
           // reload tweets
           loadTweets();
         })
