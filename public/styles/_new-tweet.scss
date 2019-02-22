@@ -27,7 +27,8 @@
 
   .tweet-text {
     width: 100%;
-    height: 65px;
+    height: 90px;
+    font-size: 22px;
   }
 
   form {
@@ -41,6 +42,7 @@
   }
 
   .submit-button {
+    margin-top: 10px;
     background-color: $colorComposeButton;
     border: 2px solid $colorComposeButtonBorder;
     color: $colorComposeButtonText;
@@ -52,6 +54,7 @@
     outline: none;
     width: 12.3vw;
     max-width: 90px;
+    align-self: center;
   }
 
   .submit-button:hover {
@@ -61,7 +64,10 @@
   }
 
   .counter {
-    float: right;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    align-self: center;
   }
 }
 
@@ -72,6 +78,8 @@
 }
 
 .error {
+  margin-top: 15px;
+  font-weight: bold;
   color: $colorErrorText;
 }
 
@@ -88,9 +96,24 @@
       height: 97px;
     }
 
+    .tweet-text {
+      height: 65px;
+      font-size: 16px;
+    }
+
     .submit-button {
+      margin-top: 5px;
       height: 30px;
       width: 61.5px;
+    }
+
+    .counter {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .error {
+      margin-top: 10px;
     }
   }
 }
