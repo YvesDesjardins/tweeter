@@ -44,7 +44,7 @@ body {
 }
 
 .container.active {
-  padding-top: 240px;
+  padding-top: 280px;
 }
 
 #nav-bar {
@@ -274,6 +274,9 @@ body {
   .container {
     width: 450px;
     min-width: 450px;
+  }
+  .container.active {
+    padding-top: 240px;
   }
 }
 /*# sourceMappingURL=layout.css.map */

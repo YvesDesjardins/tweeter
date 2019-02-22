@@ -65,7 +65,7 @@ body {
 }
 
 .container.active {
-  padding-top: 240px;
+  padding-top: 280px;
 }
 
 @import 'nav';
@@ -76,5 +76,9 @@ body {
   .container {
     width: 450px;
     min-width: 450px;
+  }
+
+  .container.active {
+    padding-top: 240px;
   }
 }
