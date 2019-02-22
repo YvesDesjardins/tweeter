@@ -4,20 +4,19 @@
  * Do not modify these two selectors, please
  */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
+
 body {
   margin: 0;
   color: #244751;
@@ -28,6 +27,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 .container {
   padding-top: 80px;
   padding-bottom: 1em;
@@ -37,11 +37,9 @@ body {
   margin: auto;
   font-size: 20px;
   background-color: white;
-  -webkit-transition: all .2s;
   transition: all .2s;
 }
 
 .container.active {
   padding-top: 240px;
 }
-/*# sourceMappingURL=layout.css.map */

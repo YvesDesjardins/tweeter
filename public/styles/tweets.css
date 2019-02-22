@@ -7,10 +7,6 @@
   opacity: 0.6;
 }
 
-.tweet:hover {
-  opacity: 1;
-}
-
 .tweet header {
   height: 50px;
 }
@@ -72,6 +68,11 @@
   outline: none;
 }
 
+.tweet:hover {
+  opacity: 1;
+}
+
 .tweet:hover .buttons {
   opacity: 1;
 }
+/*# sourceMappingURL=tweets.css.map */
