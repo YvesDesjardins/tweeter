@@ -19,11 +19,12 @@ $color2: #a6e3e9;
 $color3: #cbf1f5;
 $color4: #e3fdfd;
 
+$colorTweetListBackground: white;
 $colorTweetBackground: #fafafa;
 $colorText: #244751;
 $colorBorder: #dddddd;
 
-$colorComposeButton: #00c5a8;
+$colorComposeButton: #50a6aa;
 $colorComposeButtonBorder: white;
 $colorComposeButtonText: white;
 $colorComposeButtonHover: white;
@@ -39,7 +40,7 @@ $colorErrorText: red;
 body {
   margin: 0;
   color: $colorText;
-  background-color: $color3;
+  background-color: $color4;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -55,7 +56,7 @@ body {
   width: 450px;
   margin: auto;
   font-size: 20px;
-  background-color: white;
+  background-color: $colorTweetListBackground;
   transition: all .2s;
 }
 

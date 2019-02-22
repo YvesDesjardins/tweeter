@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #cbf1f5;
+  background-color: #e3fdfd;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -80,13 +80,14 @@ body {
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   border: 2px solid white;
-  background-color: #00c5a8;
+  background-color: #50a6aa;
   color: white;
   outline: none;
 }
 
 #nav-bar .compose:hover {
   background-color: white;
+  border-color: #dddddd;
   color: black;
 }
 
@@ -125,7 +126,7 @@ body {
 }
 
 .new-tweet .submit-button {
-  background-color: #00c5a8;
+  background-color: #50a6aa;
   border: 2px solid white;
   color: white;
   font-weight: bold;
@@ -138,6 +139,7 @@ body {
 
 .new-tweet .submit-button:hover {
   background-color: white;
+  border-color: #dddddd;
   color: black;
 }
 
