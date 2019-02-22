@@ -6,7 +6,10 @@
   border-radius: 10px;
   position: fixed;
   z-index: 1030;
-  width: 370px;
+  width: 74%;
+  max-width: 600px;
+  height: 32.5vw;
+  max-height: 200px;
   top: 80px;
   left: 0;
   right: 0;
@@ -29,6 +32,12 @@
 
   form {
     margin-bottom: 10px;
+    height: 19.4vw;
+    max-height: 132px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .submit-button {
@@ -41,6 +50,8 @@
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
     outline: none;
+    width: 12.3vw;
+    max-width: 90px;
   }
 
   .submit-button:hover {
@@ -66,4 +77,20 @@
 
 .error-count {
   color: $colorErrorText;
+}
+
+@media screen and (max-width: $break-small) {
+  .new-tweet {
+    width: 370px;
+    height: 162px;
+
+    form {
+      height: 97px;
+    }
+
+    .submit-button {
+      height: 30px;
+      width: 61.5px;
+    }
+  }
 }

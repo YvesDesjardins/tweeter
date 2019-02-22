@@ -99,7 +99,10 @@ body {
   border-radius: 10px;
   position: fixed;
   z-index: 1030;
-  width: 370px;
+  width: 74%;
+  max-width: 600px;
+  height: 32.5vw;
+  max-height: 200px;
   top: 80px;
   left: 0;
   right: 0;
@@ -123,6 +126,16 @@ body {
 
 .new-tweet form {
   margin-bottom: 10px;
+  height: 19.4vw;
+  max-height: 132px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .new-tweet .submit-button {
@@ -135,6 +148,8 @@ body {
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   outline: none;
+  width: 12.3vw;
+  max-width: 90px;
 }
 
 .new-tweet .submit-button:hover {
@@ -159,6 +174,20 @@ body {
 
 .error-count {
   color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .new-tweet {
+    width: 370px;
+    height: 162px;
+  }
+  .new-tweet form {
+    height: 97px;
+  }
+  .new-tweet .submit-button {
+    height: 30px;
+    width: 61.5px;
+  }
 }
 
 .tweet {
