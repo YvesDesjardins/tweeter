@@ -132,7 +132,7 @@ $(() => {
   // loads all tweets on refresh of page
   loadTweets();
 
-  // if no existing tweets post this tempory one
+  // if no existing tweets, post this tempory one
   if ($('#tweet-list').children().length === 0) {
     console.log('woops');
     const $tempTweet = {
