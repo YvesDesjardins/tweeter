@@ -26,9 +26,12 @@ $(() => {
     const $tempTweet = $('<article>').addClass('tweet');
     const name = [data.user.name];
     const img = data.user.avatars.small;
-    const date = Date(data.created_at).toString().slice(0, 15);
+    const timeParse = new Date(data.created_at).toString().slice(16, 33);
+    const dateParse = Math.round(Math.abs((data.created_at - Date.now()) / (24 * 60 * 60 * 1000)));
+    const date = dateParse > 0 ? `${dateParse} days old` : `Today at ${timeParse}`;
     const handle = [data.user.handle];
     const content = data.content.text;
+    console.log(timeParse);
 
     // build out the new tweet
     $('<header>').appendTo($tempTweet);
