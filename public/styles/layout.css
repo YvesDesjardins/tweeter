@@ -155,6 +155,10 @@ body {
   color: red;
 }
 
+.error-count {
+  color: red;
+}
+
 .tweet {
   margin-top: 1em;
   border: 2px solid #dddddd;

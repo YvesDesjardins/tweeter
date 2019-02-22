@@ -8,9 +8,9 @@ $(() => {
 
     // if char count < 0 color text red
     if ($count.text() < 0) {
-      $count.addClass('error');
+      $count.addClass('error-count');
     } else {
-      $count.removeClass('error');
+      $count.removeClass('error-count');
     }
   });
 });
