@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #cbf1f5;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -43,5 +43,193 @@ body {
 
 .container.active {
   padding-top: 240px;
+}
+
+#nav-bar {
+  background-color: #71c9ce;
+  color: black;
+  height: 80px;
+  width: 100%;
+  margin: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+#nav-bar .logo {
+  height: 80px;
+  float: left;
+}
+
+#nav-bar .header {
+  padding-left: 10px;
+  font-size: 36px;
+  line-height: 80px;
+}
+
+#nav-bar .compose {
+  float: right;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  /* Safari */
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  border: 2px solid white;
+  background-color: #00c5a8;
+  color: white;
+  outline: none;
+}
+
+#nav-bar .compose:hover {
+  background-color: white;
+  color: black;
+}
+
+.new-tweet {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #000000;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1030;
+  width: 370px;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.new-tweet h2 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.new-tweet hr {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.new-tweet .tweet-text {
+  width: 100%;
+  height: 65px;
+}
+
+.new-tweet form {
+  margin-bottom: 10px;
+}
+
+.new-tweet .submit-button {
+  background-color: #00a087;
+  border: 2px solid #005e50;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  outline: none;
+}
+
+.new-tweet .submit-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.new-tweet .counter {
+  float: right;
+}
+
+.tweets {
+  padding-left: 2em;
+  padding-right: 2em;
+  clear: both;
+}
+
+.error {
+  color: red;
+}
+
+.tweet {
+  margin-top: 1em;
+  border: 2px solid #dddddd;
+  background-color: #cbf1f5;
+  border-radius: 5px;
+  border-bottom-left-radius: 2px;
+  opacity: 0.6;
+}
+
+.tweet header {
+  height: 50px;
+}
+
+.tweet img {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  max-height: 42px;
+  float: left;
+  border-radius: 25%;
+}
+
+.tweet .name {
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  float: left;
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tweet .user {
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  float: right;
+}
+
+.tweet form {
+  padding: 15px;
+  background-color: #e3fdfd;
+  overflow-wrap: break-word;
+}
+
+.tweet footer {
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #e3fdfd;
+  border-top: 1px solid #dddddd;
+  overflow: hidden;
+}
+
+.tweet .age {
+  line-height: 25px;
+  font-size: 12px;
+  float: left;
+}
+
+.tweet .buttons {
+  max-height: 20px;
+  margin-top: 2px;
+  float: right;
+  opacity: 0;
+  outline: none;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet:hover .buttons {
+  opacity: 1;
 }
 /*# sourceMappingURL=layout.css.map */
