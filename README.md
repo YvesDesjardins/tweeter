@@ -13,3 +13,7 @@ Tweeter is a simple, single-page Twitter clone using HTML, CSS, JS, jQuery and A
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- MongoDB
+- MD5
