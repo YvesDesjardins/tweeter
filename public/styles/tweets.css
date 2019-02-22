@@ -30,6 +30,10 @@
   font-size: 22px;
   font-weight: bold;
   float: left;
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tweet .user {
