@@ -87,6 +87,9 @@ $(() => {
     }
   });
 
+  // handle inline button clicks on individual tweets
+  $('.tweet').on('click', 'buttons', (event) => {});
+
   // handles new tweet submissions
   $('.new-tweet').on('submit', (event) => {
     const $tweet = $('.tweet-text').serialize()

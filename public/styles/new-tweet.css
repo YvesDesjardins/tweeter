@@ -23,12 +23,29 @@
   margin-bottom: 20px;
 }
 
-.new-tweet textarea {
+.new-tweet .tweet-text {
   width: 100%;
+  height: 65px;
 }
 
 .new-tweet form {
   margin-bottom: 10px;
+}
+
+.new-tweet .submit-button {
+  background-color: #00a087;
+  border: 2px solid #005e50;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.new-tweet .submit-button:hover {
+  background-color: white;
+  color: black;
 }
 
 .new-tweet .counter {
