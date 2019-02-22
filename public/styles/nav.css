@@ -35,6 +35,7 @@
   border: 2px solid white;
   background-color: #00c5a8;
   color: white;
+  outline: none;
 }
 
 #nav-bar .compose:hover {

@@ -41,6 +41,7 @@
   font-size: 18px;
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
+  outline: none;
 }
 
 .new-tweet .submit-button:hover {
