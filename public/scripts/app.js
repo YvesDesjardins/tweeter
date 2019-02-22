@@ -94,11 +94,11 @@ $(() => {
     const $tweet = $('.tweet-text').serialize()
     event.preventDefault();
 
-    // tests string length
+    // tests string length in submission field
     if (!$('.new-tweet').is(":hidden") && $tweet.slice(5) !== '' && $tweet.slice(5).length < 140) {
       $.post("/tweets", $tweet)
-        .then((tweet) => {
-          // sucessful post
+        // sucessfully posted to /tweets
+        .then(() => {
           $('.tweet-text').val('');
           const $count = $('.tweet-text').siblings('.counter');
           $count.text(140 - $('.tweet-text').val().length);
@@ -107,20 +107,18 @@ $(() => {
           // reload tweets
           loadTweets();
         })
+        // error handling for failed posting
         .fail((err) => {
-          // error handling
           console.log(`Error: ${err}`);
         });
-    } else if ($tweet.slice(5).length > 140) {
-      // error message
-      console.log('error 140');
+    }
+    // error handle if string length test fails
+    else if ($tweet.slice(5).length > 140) {
       let error = $('.error');
       error.text('Please shorten your message.');
       error.fadeIn(400);
       error.delay(1000).fadeOut(400);
     } else {
-      // error message
-      console.log('error 0');
       let error = $('.error');
       error.text('Please fill out this field.');
       error.fadeIn(400);
@@ -128,5 +126,6 @@ $(() => {
     }
   });
 
+  // loads all tweets on refresh of page
   loadTweets();
 });
